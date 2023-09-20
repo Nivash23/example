@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InputCount</title>
+</head>
+<body>
+    <textarea  id="inp"  cols="50"></textarea>
+    <div id="char">characterscount :0</div>
+    <script>
+        const text=document.getElementById('inp');
+        let str=document.getElementById('char');
+        function colorchange()
+        {
+
+                text.style.backgroundColor='blue';
+            // str.innerText= `characterscount :${count}
+        }
+        function colorchange2()
+        {
+                text.style.backgroundColor='green';
+            
+              // str.innerText= `characterscount :${count}
+        }
+        function colorchange3()
+        {
+            
+            text.style.backgroundColor='red'
+            // str.innerText= `characterscount :${count}
+        }
+        setInterval(colorchange,1000);
+        setInterval(colorchange2,2000);
+        setInterval(colorchange3,3000);
+        let time=document.createElement('p');
+        document.body.appendChild(time);
+        
+        text.addEventListener('click',colorchange)
+        time.style.textAlign='center';
+        time.style.fontWeight='bold';
+        // time.style.width='80px'
+        setInterval(()=>{
+            let now=new Date();
+            time.textContent=`${now.getHours().toString().padStart('2','0')}:${now.getMinutes().toString().padStart('2','0')}:${now.getSeconds().toString().padStart('2','0')}`;
+      
+        },1000);
+
+
+
+        let ele=document.createElement('h3');
+        document.body.appendChild(ele);
+        ele.textContent='hi';
+        
+        
+    </script>
+    
+</body>
+</html>
